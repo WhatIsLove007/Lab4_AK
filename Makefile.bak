@@ -1,0 +1,15 @@
+CXX = gcc
+
+#---------File Dependencies-------------
+SRC = calculator.cpp calculator2.cpp calculator.h
+
+OBJ = calculator.o, calculator2.o
+
+depend:
+	makedepend -Y $(SRC)
+
+clean:
+	rm -f $(OBJ)
+# DO NOT DELETE
+
+calculator.o: calculator.h
